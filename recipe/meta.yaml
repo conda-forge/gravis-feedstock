@@ -8,8 +8,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/robert-haas/gravis/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8734066afd749fd85f9f173f92a1b501ae8e31723d1894c15f29fcec3eac5419
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gravis-{{ version }}.tar.gz
+    sha256: a36342602aa7da3bbd674c970439717926a8f7ca0678aa82cc5d756e8c2a529b
+  - url: https://github.com/robert-haas/gravis/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 8734066afd749fd85f9f173f92a1b501ae8e31723d1894c15f29fcec3eac5419
+    folder: test-data
 
 build:
   noarch: python
@@ -32,7 +35,7 @@ test:
     - echo "Before ls"
     - ls -R
     - echo "After ls"
-    - python -m pytest tests/
+    - python -m pytest test-data/tests/
   source_files:
     - .
   requires:
