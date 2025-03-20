@@ -28,6 +28,9 @@ test:
     - gravis
   commands:
     - pip check
+    - echo "Before ls"
+    - ls
+    - echo "After ls"
     - python -m pytest tests/
   source_files:
     - .
