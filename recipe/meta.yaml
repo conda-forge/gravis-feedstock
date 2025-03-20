@@ -29,6 +29,8 @@ test:
   commands:
     - pip check
     - pytest tests/
+  source_files:
+    - .
   requires:
     - pip
     - python {{ python_min }}
