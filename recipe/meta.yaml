@@ -28,7 +28,7 @@ test:
     - gravis
   commands:
     - pip check
-    - pytest tests/
+    - python -m pytest tests/
   source_files:
     - .
   requires:
