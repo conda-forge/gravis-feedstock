@@ -7,7 +7,6 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
-https://github.com/robert-haas/gravis/archive/refs/tags/v{{ version }}.tar.gz
 source:
   url: https://github.com/robert-haas/gravis/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 8734066afd749fd85f9f173f92a1b501ae8e31723d1894c15f29fcec3eac5419
