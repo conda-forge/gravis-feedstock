@@ -29,7 +29,7 @@ test:
   commands:
     - pip check
     - echo "Before ls"
-    - ls -al
+    - ls -R
     - echo "After ls"
     - python -m pytest gravis/tests/
   source_files:
