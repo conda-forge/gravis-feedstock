@@ -1,3 +1,4 @@
+{% set python_min = "3.5" %}
 {% set name = "gravis" %}
 {% set version = "0.1.0" %}
 
@@ -27,9 +28,11 @@ test:
     - gravis
   commands:
     - pip check
+    - pytest
   requires:
     - pip
     - python {{ python_min }}
+    - pytest
 
 about:
   home: https://robert-haas.github.io/gravis-docs/
