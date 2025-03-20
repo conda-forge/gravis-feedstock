@@ -29,9 +29,9 @@ test:
   commands:
     - pip check
     - echo "Before ls"
-    - ls
+    - ls -al
     - echo "After ls"
-    - python -m pytest tests/
+    - python -m pytest gravis/tests/
   source_files:
     - .
   requires:
